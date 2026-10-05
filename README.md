@@ -31,25 +31,6 @@ The live site is deployed automatically from the `main` branch through GitHub Ac
 
 Repository: [shahriarpavel/Pixel-Pipeline](https://github.com/shahriarpavel/Pixel-Pipeline)
 
-## GitHub setup
-
-The project is already configured for GitHub Pages. For a new repository, push the project with:
-
-```bash
-git init
-git add .
-git commit -m "Build PixelPipeline prototype"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repository>.git
-git push -u origin main
-```
-
-Then open **Settings > Pages**, choose **GitHub Actions** under **Build and deployment**, and push to `main`. The included workflow will build and deploy the site automatically.
-
-The Vite configuration uses relative asset paths, so the same build works for both project sites and user sites. The workflow deploys the compiled `dist/` output; browsers do not need to execute the TypeScript/JSX source files directly.
-
-The site can also be deployed to Netlify, Vercel, or any static hosting provider using `npm run build`; the generated `dist/` folder is the deployment output.
-
 ## Tech stack
 
 - React 19
