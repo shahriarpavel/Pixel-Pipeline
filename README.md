@@ -2,7 +2,7 @@
 
 > Turn game progress into publish-ready content.
 
-PixelPipeline is a browser-based prototype for indie game developers who want to share progress without stopping development to write marketing content. Add a commit, changelog, or gameplay attachment and PixelPipeline creates platform-ready update ideas for Discord, X/Twitter, and Steam.
+PixelPipeline is a live browser app for indie game developers who want to share progress without stopping development to write marketing content. Add a commit, changelog, or gameplay attachment and PixelPipeline creates platform-ready update ideas for Discord, X/Twitter, and Steam.
 
 The project is built as a single-page React experience with a dark cyberpunk visual style, animated terminal output, glassmorphism cards, a scrolling grid, scanlines, reveal-on-scroll effects, and a custom cursor trail.
 
@@ -25,12 +25,15 @@ The Pipeline Studio works fully in the browser without an account or API key. Pu
 
 ## Live demo
 
-This project is designed to run as a static GitHub Pages site. After deployment, visitors can use the manual workflow without signing in or configuring a server. Public Git provider imports require the provider's public API to be reachable from the browser.
+[Open PixelPipeline on GitHub Pages](https://shahriarpavel.github.io/Pixel-Pipeline/)
+
+The live site is deployed automatically from the `main` branch through GitHub Actions. Visitors can use the manual workflow without signing in or configuring a server. Public Git provider imports require the provider's public API to be reachable from the browser.
+
+Repository: [shahriarpavel/Pixel-Pipeline](https://github.com/shahriarpavel/Pixel-Pipeline)
 
 ## GitHub setup
 
-1. Create a new GitHub repository.
-2. Push this project to the repository:
+The project is already configured for GitHub Pages. For a new repository, push the project with:
 
 ```bash
 git init
@@ -41,9 +44,7 @@ git remote add origin https://github.com/<your-username>/<your-repository>.git
 git push -u origin main
 ```
 
-3. On GitHub, open **Settings > Pages**.
-4. Under **Build and deployment**, choose **GitHub Actions** as the source.
-5. Push to `main`. The included Pages workflow will build and deploy the site automatically.
+Then open **Settings > Pages**, choose **GitHub Actions** under **Build and deployment**, and push to `main`. The included workflow will build and deploy the site automatically.
 
 The Vite configuration uses relative asset paths, so the same build works for both project sites and user sites. The workflow deploys the compiled `dist/` output; browsers do not need to execute the TypeScript/JSX source files directly.
 
