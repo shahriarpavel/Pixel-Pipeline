@@ -43,9 +43,9 @@ git push -u origin main
 
 3. On GitHub, open **Settings > Pages**.
 4. Under **Build and deployment**, choose **GitHub Actions** as the source.
-5. Push to `main`. The included `.github/workflows/deploy-pages.yml` workflow will build and deploy the site automatically.
+5. Push to `main`. The included Pages workflow will build and deploy the site automatically.
 
-The Vite configuration uses relative asset paths, so the same build works for both project sites and user sites.
+The Vite configuration uses relative asset paths, so the same build works for both project sites and user sites. The workflow deploys the compiled `dist/` output; browsers do not need to execute the TypeScript/JSX source files directly.
 
 The site can also be deployed to Netlify, Vercel, or any static hosting provider using `npm run build`; the generated `dist/` folder is the deployment output.
 
